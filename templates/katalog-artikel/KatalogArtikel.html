@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="id" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Katalog Artikel — IDDS Template</title>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@idds/js@latest/dist/style.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto,
+          sans-serif;
+      }
+      .line-clamp-3 {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body class="bg-background-primary text-content-primary">
+    <div class="flex min-h-screen">
+      <aside
+        aria-label="Navigasi utama"
+        class="hidden w-60 shrink-0 border-r border-stroke-primary bg-surface-primary md:flex md:flex-col"
+      >
+        <div class="flex h-16 items-center gap-8 border-b border-stroke-primary px-24">
+          <span class="text-xl font-bold text-primary-500">IDDS</span>
+          <span class="text-sm text-content-secondary">Playground</span>
+        </div>
+        <nav class="flex-1 px-12 py-16" aria-label="Menu utama">
+          <ul class="grid gap-4">
+            <li>
+              <a
+                href="../dashboard/Dashboard.html"
+                class="flex items-center gap-12 rounded-md px-12 py-8 text-sm font-medium text-content-secondary hover:bg-surface-secondary hover:text-content-primary"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/></svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a
+                href="../formulir/Formulir.html"
+                class="flex items-center gap-12 rounded-md px-12 py-8 text-sm font-medium text-content-secondary hover:bg-surface-secondary hover:text-content-primary"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                Formulir
+              </a>
+            </li>
+            <li>
+              <a
+                href="KatalogArtikel.html"
+                aria-current="page"
+                class="flex items-center gap-12 rounded-md bg-primary-50 px-12 py-8 text-sm font-medium text-primary-700"
+              >
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h12a4 4 0 0 1 4 4v12H8a4 4 0 0 1-4-4Z"/><path d="M4 4v16"/></svg>
+                Katalog Artikel
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div class="border-t border-stroke-primary p-16 text-caption text-content-secondary">
+          INA Digital Design System v1.0
+        </div>
+      </aside>
+
+      <div class="flex min-w-0 flex-1 flex-col">
+        <header
+          class="sticky top-0 z-20 flex h-16 items-center gap-16 border-b border-stroke-primary bg-surface-primary px-16 md:px-24"
+        >
+          <div class="flex flex-1 items-center gap-12">
+            <span class="text-lg font-bold text-primary-500">INA</span>
+            <span class="hidden text-content-secondary md:inline">/ Playground</span>
+          </div>
+          <button
+            type="button"
+            class="flex items-center gap-8 rounded-md px-8 py-4 hover:bg-surface-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+            aria-label="Buka menu pengguna John Doe"
+          >
+            <span
+              class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700"
+              aria-hidden="true"
+            >JD</span>
+            <span class="hidden text-left md:block">
+              <span class="block text-sm font-medium text-content-primary">John Doe</span>
+              <span class="block text-xs text-content-secondary">Product Designer</span>
+            </span>
+          </button>
+        </header>
+
+        <main
+          id="konten-utama"
+          class="flex-1 overflow-y-auto px-4 py-24 md:px-32 md:py-32"
+        >
+          <section class="mx-auto max-w-6xl">
+            <header class="mb-24">
+              <h1 class="text-2xl font-semibold text-content-primary md:text-3xl">
+                Artikel
+              </h1>
+              <p class="mt-4 text-content-secondary">
+                Kelola dan jelajahi artikel sebagai sumber informasi resmi
+                INAgov.
+              </p>
+            </header>
+
+            <div class="mb-16 flex flex-col gap-12 md:flex-row md:items-center md:justify-between">
+              <div
+                role="tablist"
+                class="inline-flex rounded-md border border-stroke-secondary p-4"
+                aria-label="Kategori artikel"
+              >
+                <button type="button" role="tab" aria-selected="true" class="rounded-sm bg-surface-secondary px-12 py-4 text-sm font-medium text-content-primary">Semua</button>
+                <button type="button" role="tab" aria-selected="false" class="rounded-sm px-12 py-4 text-sm font-medium text-content-secondary">Layanan Publik</button>
+                <button type="button" role="tab" aria-selected="false" class="rounded-sm px-12 py-4 text-sm font-medium text-content-secondary">Kebijakan & Regulasi</button>
+                <button type="button" role="tab" aria-selected="false" class="rounded-sm px-12 py-4 text-sm font-medium text-content-secondary">Panduan Pengguna</button>
+              </div>
+              <label class="relative md:w-80">
+                <span class="sr-only">Cari artikel</span>
+                <span class="pointer-events-none absolute left-12 top-1/2 -translate-y-1/2 text-content-secondary" aria-hidden="true">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                </span>
+                <input
+                  type="search"
+                  placeholder="Cari artikel…"
+                  class="w-full rounded-md border border-stroke-primary bg-surface-primary py-8 pl-32 pr-12 text-content-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                />
+              </label>
+            </div>
+
+            <ul
+              class="grid grid-cols-1 gap-16 md:grid-cols-2 xl:grid-cols-3"
+              aria-label="Daftar artikel"
+            >
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Layanan Publik</span>
+                    <span class="text-caption text-content-secondary">12 Januari 2026</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">Pemerintah Perkuat Layanan Digital ASN Melalui Integrasi INAgov</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Integrasi layanan ke dalam INAgov diharapkan meningkatkan efisiensi dan akses informasi bagi Aparatur Sipil Negara di seluruh Indonesia.</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">PA</span>
+                      <span class="text-caption text-content-secondary">PANRB</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Kebijakan & Regulasi</span>
+                    <span class="text-caption text-content-secondary">8 Januari 2026</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">PANRB Resmikan Pembaruan Sistem Digital Terpadu</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Pembaruan ini mencakup peningkatan konten FAQ, artikel ke...</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">PA</span>
+                      <span class="text-caption text-content-secondary">PANRB</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Layanan Publik</span>
+                    <span class="text-caption text-content-secondary">5 Januari 2026</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">Mulai 2025, Informasi Layanan Publik Terpusat di INAgov</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Pemerintah menargetkan INAgov sebagai kanal utama penyampaian informasi layanan publik kepada masyarakat.</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">KP</span>
+                      <span class="text-caption text-content-secondary">Kementerian PANRB</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Kebijakan & Regulasi</span>
+                    <span class="text-caption text-content-secondary">2 Januari 2026</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">INAgov Dorong Transparansi Informasi Pemerintahan</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Langkah ini dilakukan untuk memastikan ASN memperoleh informasi yang akurat dan terkini mengenai kebijakan pemerintah.</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">HI</span>
+                      <span class="text-caption text-content-secondary">Humas INAgov</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Panduan Pengguna</span>
+                    <span class="text-caption text-content-secondary">28 Desember 2025</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">Pemerintah Tingkatkan Kualitas Konten Informasi Digital</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Optimalisasi konten artikel dan pusat bantuan menjadi bagian dari strategi transformasi digital pemerintah.</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">TK</span>
+                      <span class="text-caption text-content-secondary">Tim Konten</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+              <li>
+                <article class="flex h-full flex-col gap-12 rounded-lg border border-stroke-secondary bg-surface-primary p-24">
+                  <div class="flex items-center gap-8">
+                    <span class="rounded-md bg-primary-50 px-8 py-4 text-caption font-medium text-primary-700">Kebijakan & Regulasi</span>
+                    <span class="text-caption text-content-secondary">20 Desember 2025</span>
+                  </div>
+                  <h2 class="text-lg font-semibold leading-snug text-content-primary">
+                    <a href="#" class="hover:underline">PANRB Tekankan Pentingnya Integrasi Sistem Informasi</a>
+                  </h2>
+                  <p class="line-clamp-3 text-sm text-content-secondary">Pengelolaan artikel dan pusat informasi dinilai krusial dalam mendukung efisiensi kerja ASN.</p>
+                  <footer class="mt-auto flex items-center justify-between border-t border-stroke-secondary pt-16">
+                    <div class="flex items-center gap-8">
+                      <span class="grid h-8 w-8 place-items-center rounded-full bg-primary-100 text-xs font-semibold text-primary-700" aria-hidden="true">PA</span>
+                      <span class="text-caption text-content-secondary">PANRB</span>
+                    </div>
+                    <a href="#" class="inline-flex items-center gap-4 text-caption font-medium text-primary-700 hover:underline">Baca →</a>
+                  </footer>
+                </article>
+              </li>
+            </ul>
+
+            <nav
+              class="mt-24 flex flex-col gap-12 md:flex-row md:items-center md:justify-between"
+              aria-label="Navigasi halaman"
+            >
+              <p class="text-caption text-content-secondary">Halaman 1 dari 3</p>
+              <ol class="flex items-center gap-4">
+                <li>
+                  <button
+                    type="button"
+                    class="rounded-md border border-stroke-primary bg-surface-primary px-12 py-4 text-caption text-content-primary hover:bg-surface-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                    disabled
+                    aria-label="Halaman sebelumnya"
+                  >
+                    Sebelumnya
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    aria-current="page"
+                    class="rounded-md bg-primary-500 px-12 py-4 text-caption font-semibold text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                  >
+                    1
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="rounded-md border border-stroke-primary bg-surface-primary px-12 py-4 text-caption text-content-primary hover:bg-surface-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                  >
+                    2
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="rounded-md border border-stroke-primary bg-surface-primary px-12 py-4 text-caption text-content-primary hover:bg-surface-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                  >
+                    3
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    class="rounded-md border border-stroke-primary bg-surface-primary px-12 py-4 text-caption text-content-primary hover:bg-surface-secondary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                    aria-label="Halaman berikutnya"
+                  >
+                    Berikutnya
+                  </button>
+                </li>
+              </ol>
+            </nav>
+          </section>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -245,7 +245,7 @@ Svelte equivalent.
 
 ## Maintenance & Versioning
 
-- **Version:** 1.5.2 (see `SKILL.md`).
+- **Version:** 1.5.3 (see `SKILL.md`).
 - **Source of truth:** [design.inadigital.go.id](https://design.inadigital.go.id). When the official docs change, update the rule, pattern, and template files together.
 - **Adding a template:** create a folder under `templates/`, mirror the structure of `templates/dashboard/`, and add an entry in `templates/README.md` and the table above.
 - **Adding a pattern:** create `patterns/<name>.md` following the structure in `patterns/dashboard.md`, then reference it from `SKILL.md`'s file-reading order.

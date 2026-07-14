@@ -91,6 +91,32 @@ To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly i
 
 ---
 
+## Card Content Design Rules (Anti-Slop Card Layouts)
+
+To prevent cluttered, poorly sized, and unreadable card layouts, the AI must strictly implement these official IDDS Card Content rules:
+
+### 1. Card Layout Variants
+Always choose the most appropriate card variant for your content type:
+* **Basic Card**: Balanced media and text (image + title + description + CTA). Use for general news, articles, or standard lists.
+* **Overlay Card**: Text/CTA placed directly over a background image. Always apply a dark gradient scrim overlay underneath the text to ensure 100% legibility. Never use if the background image has high-frequency patterns that make text difficult to read.
+* **Horizontal Card**: Image and text aligned in a single row. Use when vertical space is limited or for long-form index lists.
+
+### 2. Sizing Constraints
+Maintain balanced proportions by wrapping cards strictly within these width bounds:
+* **Vertical Cards**: Minimum width `240px`, maximum width `400px`.
+* **Horizontal Cards**: Minimum width `320px`, maximum width `720px`.
+* *Grid Rule*: Always use consistent widths for all cards in a single grid row to maintain visual balance.
+
+### 3. Copywriting & Content Limits
+* **Rule**: Never stuff cards with dense paragraphs of text.
+* **Action**: Keep card titles and descriptions to **1-2 lines maximum**. Use progressive disclosure (button clicks or hover overlays) to show more details, keeping cards light and clean.
+
+### 4. Grid Consistency
+* **Rule**: Never mix different card variants inside the same row or grid.
+* **Action**: If a row starts with a Basic Card, all other cards in that grid row/group must be Basic Cards as well. Never mix Basic, Horizontal, or Overlay card types side-by-side.
+
+---
+
 ## Dashboard Anti-Slop Rules
 
 Avoid:

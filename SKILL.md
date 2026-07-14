@@ -7,7 +7,7 @@ description: Operational skill pack that teaches AI coding agents how to design,
 
 ## Status
 
-**Version:** 1.4.1  
+**Version:** 1.5.0  
 **Scope:** AI-assisted UI/UX design, redesign, implementation review, and frontend generation for Indonesian government/public-service applications.  
 **Reference basis:** INA Digital Design System (IDDS) public documentation, especially overview, foundation, components, patterns, and React developer guide.
 
@@ -142,7 +142,7 @@ When an AI agent loads this skill, read these files in order:
 5. `rules/accessibility.md`
 6. `rules/writing-tone.md`
 7. `rules/anti-ai-slop.md`
-8. relevant file from `patterns/` (e.g., `dashboard.md`, `public-service-form.md`, `admin-panel.md`)
+8. relevant file from `patterns/` (e.g., `dashboard.md`, `public-service-form.md`, `admin-panel.md`, `otp.md`, `faq.md`, `404-section.md`)
 9. relevant file from `implementation/` (e.g., `react-idds.md`, `vue-idds.md`, `shadcn-integration.md`, `tailwind-token-mapping.md`)
 10. relevant template from `templates/` (if building a full page)
 11. relevant checklist from `checklists/`

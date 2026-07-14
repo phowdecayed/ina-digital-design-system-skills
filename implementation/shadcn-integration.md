@@ -21,6 +21,23 @@ Do not replace core IDDS elements with shadcn clones. Maintain the following bou
 
 ---
 
+## The Golden Rule: Package Priority Over shadcn Reconciliation
+
+To prevent visual inconsistencies, spacing pollution (like `p-6` or `p-5` in pre-generated shadcn markup), and code duplication, the AI must strictly adhere to this rule:
+
+### 1. ALWAYS Import From IDDS Packages First
+When a component exists in both `@idds/vue` (or `@idds/react`) and `shadcn-vue` (or `shadcn/ui`), you **must ALWAYS import and use the official IDDS package component**.
+* **Forbidden**: Do not attempt to "reconcile" or adapt a pre-installed shadcn component (like `Accordion` or `Button`) by overriding its Tailwind classes to mimic IDDS.
+* **Why**: Pre-generated shadcn components are bundled with their own unstandardized spacing utility classes (`p-5`, `p-6`, `gap-5`). Trying to override or reconcile them in your codebase is error-prone, pollutes your code, and leads to visual slop.
+
+### 2. Mandatory Replacement of Duplicate shadcn Components
+If you encounter pre-installed shadcn components in the codebase that have official IDDS equivalents (e.g., an existing shadcn `Accordion`, `Button`, or `Alert` in a starter kit), you must **replace them with the clean, official IDDS components** instead of trying to manually style or customize the pre-existing shadcn markup.
+
+### 3. shadcn is ONLY for Missing Headless Primitives
+Only use `shadcn` for components that **do not have equivalents** in the official IDDS component inventory (such as `Combobox`, `Command`, `Popover`, `Hover Card`). When styling these missing primitives, never copy shadcn's default padding/margin classes; style them strictly with IDDS-aligned layout and spacing.
+
+---
+
 ## Theme Integration Bridge (Tailwind CSS v4)
 
 shadcn uses standard CSS utility variables (like `--color-primary`, `--color-border`), whereas IDDS exposes its own set of semantic CSS variables under `data-theme`.

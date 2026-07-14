@@ -142,8 +142,8 @@ When an AI agent loads this skill, read these files in order:
 5. `rules/accessibility.md`
 6. `rules/writing-tone.md`
 7. `rules/anti-ai-slop.md`
-8. relevant file from `patterns/`
-9. relevant file from `implementation/`
+8. relevant file from `patterns/` (e.g., `dashboard.md`, `public-service-form.md`, `admin-panel.md`)
+9. relevant file from `implementation/` (e.g., `react-idds.md`, `vue-idds.md`, `shadcn-integration.md`, `tailwind-token-mapping.md`)
 10. relevant template from `templates/` (if building a full page)
 11. relevant checklist from `checklists/`
 

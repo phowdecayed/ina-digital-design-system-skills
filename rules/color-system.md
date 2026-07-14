@@ -194,14 +194,22 @@ Do not do this:
 
 Since regional themes like `'jabar'` do not exist as pre-built stylesheets in the official national `@idds/styles` package, you must declare these West Java Province / JDS brand color tokens locally in your main CSS file.
 
-### Tiga Warna Utama Jawa Barat (JDS)
-1. **JDS Blue** (`#1E88E5`): Warna identitas utama JDS, melambangkan keandalan dan teknologi. Diaplikasikan sebagai **Primary** token (`--color-primary-600`).
-2. **JDS Green** (`#16A75C`): Melambangkan pertumbuhan dan inklusivitas Jawa Barat. Diaplikasikan sebagai **Success** token (`--color-success-600`).
-3. **JDS Yellow** (`#FFD026`): Melambangkan kemakmuran dan kreativitas. Diaplikasikan sebagai **Warning** token (`--color-warning-500` / `--color-warning-600`).
+### Tiga Warna Utama Jawa Barat (JDS Co-Primary Colors)
+Provinsi Jawa Barat / Jabar Digital Service (JDS) menggunakan **tiga warna utama yang semuanya berfungsi sebagai warna Primer/Brand**, bukan warna sentiment (sukses/peringatan). 
+
+Untuk memfasilitasi kebutuhan ini, AI dapat memilih salah satu dari **tiga sub-tema** Jabar berikut sesuai konteks produk instansi Anda:
+
+1. **JDS Blue** (`#1E88E5`): Warna identitas utama JDS yang melambangkan keandalan dan teknologi (`jabar-blue` atau `jabar` standar).
+2. **JDS Green** (`#16A75C`): Melambangkan pertumbuhan, pelayanan publik, dan inklusivitas (`jabar-green`).
+3. **JDS Yellow** (`#FFD026`): Melambangkan kemakmuran, kreativitas, dan keramahan (`jabar-yellow`).
 
 ```css
-/* Custom Brand Theme: Jabar (Jabar Digital Service) */
-[data-theme="jabar"] {
+/* ============================================================= */
+/* Custom Brand Theme: Jabar (Jabar Digital Service Co-Primary)  */
+/* ============================================================= */
+
+/* SUB-TEMA A: Jabar Blue (Default / JDS Blue Primary) */
+[data-theme="jabar-blue"], [data-theme="jabar"] {
   --color-primary-50: #e3f2fd;
   --color-primary-100: #bbdefb;
   --color-primary-200: #90caf9;
@@ -212,29 +220,35 @@ Since regional themes like `'jabar'` do not exist as pre-built stylesheets in th
   --color-primary-700: #1976d2;
   --color-primary-800: #1565c0;
   --color-primary-900: #0d47a1;
+}
 
-  --color-success-50: #e8f5e9;
-  --color-success-100: #c8e6c9;
-  --color-success-200: #a5d6a7;
-  --color-success-300: #81c784;
-  --color-success-400: #66bb6a;
-  --color-success-500: #4caf50;
-  --color-success-600: #16a75c; /* JDS Green (Aksen Sukses) */
-  --color-success-700: #388e3c;
-  --color-success-800: #2e7d32;
-  --color-success-900: #1b5e20;
+/* SUB-TEMA B: Jabar Green (JDS Green Primary) */
+[data-theme="jabar-green"] {
+  --color-primary-50: #e8f5e9;
+  --color-primary-100: #c8e6c9;
+  --color-primary-200: #a5d6a7;
+  --color-primary-300: #81c784;
+  --color-primary-400: #66bb6a;
+  --color-primary-500: #4caf50;
+  --color-primary-600: #16a75c; /* JDS Green (Utama) */
+  --color-primary-700: #388e3c;
+  --color-primary-800: #2e7d32;
+  --color-primary-900: #1b5e20;
+}
 
-  --color-warning-50: #fffde7;
-  --color-warning-100: #fff9c4;
-  --color-warning-200: #fff59d;
-  --color-warning-300: #fff176;
-  --color-warning-400: #ffee58;
-  --color-warning-500: #ffd026; /* JDS Yellow (Aksen Peringatan) */
-  --color-warning-600: #fdd835;
-  --color-warning-700: #fbc02d;
-  --color-warning-800: #f9a825;
-  --color-warning-900: #f57f17;
+/* SUB-TEMA C: Jabar Yellow (JDS Yellow Primary) */
+[data-theme="jabar-yellow"] {
+  --color-primary-50: #fffde7;
+  --color-primary-100: #fff9c4;
+  --color-primary-200: #fff59d;
+  --color-primary-300: #fff176;
+  --color-primary-400: #ffee58;
+  --color-primary-500: #ffeb3b;
+  --color-primary-600: #ffd026; /* JDS Yellow (Utama) */
+  --color-primary-700: #fbc02d;
+  --color-primary-800: #f9a825;
+  --color-primary-900: #f57f17;
 }
 ```
 
-When integrating in Vue/React, simply call `setBrandTheme('jabar')` at application start, and the local CSS declarations above will automatically override all IDDS components to Jabar/JDS colors!
+Ketika menginisialisasi aplikasi Vue/React, panggil sub-tema yang diinginkan (misalnya: `setBrandTheme('jabar-green')` atau `setBrandTheme('jabar-yellow')`), dan deklarasi CSS di atas akan secara otomatis menyesuaikan warna primer seluruh komponen IDDS!

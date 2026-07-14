@@ -7,7 +7,7 @@ description: Operational skill pack that teaches AI coding agents how to design,
 
 ## Status
 
-**Version:** 1.2.1  
+**Version:** 1.2.2  
 **Scope:** AI-assisted UI/UX design, redesign, implementation review, and frontend generation for Indonesian government/public-service applications.  
 **Reference basis:** INA Digital Design System (IDDS) public documentation, especially overview, foundation, components, patterns, and React developer guide.
 

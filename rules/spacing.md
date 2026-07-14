@@ -1,8 +1,12 @@
 # Spacing
 
+## Reference Link
+
+- Official IDDS Spacing Foundation: [design.inadigital.go.id/foundation/spacing/](https://design.inadigital.go.id/foundation/spacing/)
+
 ## Objective
 
-Spacing must create a consistent visual rhythm across components and layouts. Use spacing tokens only; do not use arbitrary pixel values.
+Spacing must create a consistent visual rhythm across components and layouts. Use spacing tokens only; do not use arbitrary pixel values or non-standard Tailwind spacing classes.
 
 ---
 

@@ -51,6 +51,10 @@ To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly i
 - **Rule**: Headings must not look "raw" or loosely stacked.
 - **Action**: Always apply strict typographical rhythm on display headers: `font-extrabold tracking-tight leading-tight` (or `leading-none`). Use `block mt-4 lg:inline lg:mt-0` for multi-word highlighting.
 
+### 6. No Unofficial Tailwind Spacing Classes
+- **Rule**: Never use Tailwind's default spacing classes that do not match the IDDS spacing scale (such as `p-5`, `p-6`, `p-10`, `m-7`, `gap-5`).
+- **Action**: You must strictly use the official IDDS spacing scale. Tailwind's standard keys that are valid IDDS tokens are: `p-2` (2px), `p-4` (4px), `p-8` (8px), `p-12` (12px), `p-16` (16px), `p-24` (24px), `p-32` (32px), `p-40` (40px), `p-48` (48px), `p-56` (56px), `p-64` (64px), `p-80` (80px), and `p-128` (128px). Reference: [design.inadigital.go.id/foundation/spacing/](https://design.inadigital.go.id/foundation/spacing/) and `rules/spacing.md`.
+
 ---
 
 ## Visual Rules

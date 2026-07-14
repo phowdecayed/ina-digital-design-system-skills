@@ -1,5 +1,9 @@
 # Color System
 
+## Reference Link
+
+- Official IDDS Color System Foundation: [design.inadigital.go.id/foundation/color/](https://design.inadigital.go.id/foundation/color/)
+
 ## Objective
 
 Use color as a semantic communication system, not decoration. Color must communicate hierarchy, state, feedback, identity, and structure.
@@ -252,3 +256,34 @@ Untuk memfasilitasi kebutuhan ini, AI dapat memilih salah satu dari **tiga sub-t
 ```
 
 Ketika menginisialisasi aplikasi Vue/React, panggil sub-tema yang diinginkan (misalnya: `setBrandTheme('jabar-green')` atau `setBrandTheme('jabar-yellow')`), dan deklarasi CSS di atas akan secara otomatis menyesuaikan warna primer seluruh komponen IDDS!
+
+---
+
+## Pola Sinergi Tiga Warna Jabar (Jabar Tri-Color Synergy)
+
+Jika Anda ingin menggunakan **ketiga warna co-primary Jawa Barat** (Blue, Green, dan Yellow) bersama-sama di dalam satu antarmuka halaman yang sama, AI harus menerapkan pola penataan yang harmonis berikut untuk menjaga wibawa layanan publik:
+
+### 1. Garis Aksen Kepala (Tri-Color Header Strip)
+Gunakan garis aksen 4px di bagian paling atas header halaman, terbagi menjadi tiga bagian sama rata mewakili harmoni identitas Jawa Barat:
+* **Bagian 1 (Kiri)**: JDS Blue (`#1E88E5`)
+* **Bagian 2 (Tengah)**: JDS Green (`#16A75C`)
+* **Bagian 3 (Kanan)**: JDS Yellow (`#FFD026`)
+
+*Contoh markup Vue/Tailwind:*
+```html
+<div class="h-4 w-full flex">
+  <div class="h-full w-1/3 bg-[#1E88E5]"></div>
+  <div class="h-full w-1/3 bg-[#16A75C]"></div>
+  <div class="h-full w-1/3 bg-[#FFD026]"></div>
+</div>
+```
+
+### 2. Pembagian Kategori & Modul Berbasis Peran/Fungsi (Co-Primary Role Mapping)
+Ketika halaman memiliki beberapa kartu modul atau layanan utama, AI harus menetapkan warna JDS secara konsisten berdasarkan kategori berikut:
+* 🔵 **JDS Blue (`#1E88E5` / `text-primary-700` / `bg-primary-50`)**: Digunakan untuk modul administrasi utama, data keanggotaan, atau sistem teknologi operasional.
+* 🟢 **JDS Green (`#16A75C` / `text-success-700` / `bg-success-50`)**: Digunakan untuk program kemasyarakatan, sertifikasi keprofesian, dan layanan publik interaktif.
+* 🟡 **JDS Yellow (`#FFD026` / `text-warning-700` / `bg-warning-50`)**: Digunakan untuk pengumuman khusus, pelatihan/diklat kreatif, atau sorotan keuangan/angka kredit.
+
+### 3. Aturan Pembatasan Visual (No Color Overdecoration)
+* **Aturan**: Dilarang menggunakan ketiga warna sebagai garis tepi acak atau gradasi bertumpuk pada satu kartu yang sama.
+* **Tindakan**: Kartu tetap harus berwarna netral (`bg-surface-primary` dengan `border-stroke-secondary`). Tiga warna JDS **hanya boleh diaplikasikan pada kotak ikon penunjuk (badge ikon)** di dalam kartu tersebut (seperti contoh implementasi yang lolos audit JDS di Figma).

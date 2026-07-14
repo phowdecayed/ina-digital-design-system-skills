@@ -27,6 +27,32 @@ Common signs:
 
 ---
 
+## The "Finish & Polish" Rules (How to avoid sloppy mockups)
+
+To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly implement these exact micro-details and interactive states:
+
+### 1. No Tailwind Default Color Names
+- **Rule**: Never use default Tailwind color classes (like `bg-blue-500`, `text-gray-400`, `border-slate-200`) in final code.
+- **Action**: You must ALWAYS map styling to IDDS semantic tokens (`bg-primary-600`, `text-content-primary`, `text-content-secondary`, `border-stroke-primary`, `border-stroke-secondary`, `bg-surface-secondary`).
+
+### 2. No Pure Black Actions
+- **Rule**: Never use pure black (`#000000`, `bg-black`, or `bg-neutral-900`) for primary buttons.
+- **Action**: Use the official IDDS primary colors: `bg-primary-600` (hover: `hover:bg-primary-700`) with a white label for primary actions, and `border-stroke-primary` + `text-primary-700` (hover: `hover:bg-primary-50`) for secondary actions.
+
+### 3. Mandatory Interactive Hover States
+- **Rule**: Clickable cards, list items, and action items must never be static.
+- **Action**: Always add interactive hover states and soft transitions: `transition-all duration-300 hover:border-primary-300 hover:bg-surface-secondary`.
+
+### 4. Mandatory Iconography on Feature Cards
+- **Rule**: Feature lists, service lists, and information blocks must not be empty or plain text.
+- **Action**: Always embed functional icon badges (using `@tabler/icons-vue` or SVG inline wrappers). Format the icon container consistently: a rounded container `w-48 h-48 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center mb-16`.
+
+### 5. Precise Typography Spacing on Titles
+- **Rule**: Headings must not look "raw" or loosely stacked.
+- **Action**: Always apply strict typographical rhythm on display headers: `font-extrabold tracking-tight leading-tight` (or `leading-none`). Use `block mt-4 lg:inline lg:mt-0` for multi-word highlighting.
+
+---
+
 ## Visual Rules
 
 ### Avoid

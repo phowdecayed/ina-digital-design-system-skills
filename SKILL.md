@@ -1,3 +1,8 @@
+---
+name: idds
+description: Operational skill pack that teaches AI coding agents how to design, audit, and implement Indonesian government / public-service interfaces in alignment with the INA Digital Design System (IDDS).
+---
+
 # INA Digital Design System AI Skill
 
 ## Status

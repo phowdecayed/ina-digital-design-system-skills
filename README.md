@@ -65,14 +65,26 @@ Generic "AI-slop" interfaces (random gradients, glassmorphism, fake metrics, vag
 
 ### 1. Install
 
-Copy the package into your project or AI skills directory:
+The easiest and recommended way to install this skill is using the `skills` CLI:
 
 ```bash
-# option A — copy to a project
-cp -r .idds-skills ./my-project/.idds-skills
+# Install to your active project (default)
+npx skills add phowdecayed/ina-digital-design-system-skills
 
-# option B — install to the agent's skills folder
-cp -r .idds-skills ~/.config/opencode/skills/idds
+# Install globally to your agent's global skills directory
+npx skills add phowdecayed/ina-digital-design-system-skills -g
+```
+
+Alternatively, you can manually copy the repository files into your project's or agent's skills directory:
+
+```bash
+# option A — copy to a project (e.g. for OpenCode, Cursor, Cline)
+mkdir -p ./my-project/.agents/skills/idds
+cp -r * ./my-project/.agents/skills/idds/
+
+# option B — install to the agent's global skills folder (e.g. for OpenCode)
+mkdir -p ~/.config/opencode/skills/idds
+cp -r * ~/.config/opencode/skills/idds/
 ```
 
 ### 2. Point the agent at it

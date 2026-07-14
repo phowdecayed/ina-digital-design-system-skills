@@ -192,7 +192,12 @@ Do not do this:
 
 ## Custom Regional Theme: Jabar (Jabar Digital Service / JDS)
 
-Since regional themes like `'jabar'` do not exist as pre-built stylesheets in the official national `@idds/styles` package, you must declare these West Java Province / JDS brand color tokens locally in your main CSS file:
+Since regional themes like `'jabar'` do not exist as pre-built stylesheets in the official national `@idds/styles` package, you must declare these West Java Province / JDS brand color tokens locally in your main CSS file.
+
+### Tiga Warna Utama Jawa Barat (JDS)
+1. **JDS Blue** (`#1E88E5`): Warna identitas utama JDS, melambangkan keandalan dan teknologi. Diaplikasikan sebagai **Primary** token (`--color-primary-600`).
+2. **JDS Green** (`#16A75C`): Melambangkan pertumbuhan dan inklusivitas Jawa Barat. Diaplikasikan sebagai **Success** token (`--color-success-600`).
+3. **JDS Yellow** (`#FFD026`): Melambangkan kemakmuran dan kreativitas. Diaplikasikan sebagai **Warning** token (`--color-warning-500` / `--color-warning-600`).
 
 ```css
 /* Custom Brand Theme: Jabar (Jabar Digital Service) */
@@ -203,7 +208,7 @@ Since regional themes like `'jabar'` do not exist as pre-built stylesheets in th
   --color-primary-300: #64b5f6;
   --color-primary-400: #42a5f5;
   --color-primary-500: #2196f3;
-  --color-primary-600: #1e88e5; /* JDS Blue Primary */
+  --color-primary-600: #1e88e5; /* JDS Blue (Utama) */
   --color-primary-700: #1976d2;
   --color-primary-800: #1565c0;
   --color-primary-900: #0d47a1;
@@ -214,7 +219,7 @@ Since regional themes like `'jabar'` do not exist as pre-built stylesheets in th
   --color-success-300: #81c784;
   --color-success-400: #66bb6a;
   --color-success-500: #4caf50;
-  --color-success-600: #43a047;
+  --color-success-600: #16a75c; /* JDS Green (Aksen Sukses) */
   --color-success-700: #388e3c;
   --color-success-800: #2e7d32;
   --color-success-900: #1b5e20;
@@ -224,7 +229,7 @@ Since regional themes like `'jabar'` do not exist as pre-built stylesheets in th
   --color-warning-200: #fff59d;
   --color-warning-300: #fff176;
   --color-warning-400: #ffee58;
-  --color-warning-500: #ffeb3b;
+  --color-warning-500: #ffd026; /* JDS Yellow (Aksen Peringatan) */
   --color-warning-600: #fdd835;
   --color-warning-700: #fbc02d;
   --color-warning-800: #f9a825;

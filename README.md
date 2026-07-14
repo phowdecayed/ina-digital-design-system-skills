@@ -32,7 +32,7 @@ Generic "AI-slop" interfaces (random gradients, glassmorphism, fake metrics, vag
 │   ├── writing-tone.md            # Indonesian copy rules for government UI
 │   └── anti-ai-slop.md            # forbids generic SaaS visuals in gov UI
 │
-├── patterns/                      # 9 page-level patterns
+├── patterns/                      # 10 page-level patterns
 │   ├── admin-panel.md             # back-office / operator dashboards
 │   ├── dashboard.md               # metric, chart, and table dashboards
 │   ├── table-management.md        # dense record tables with filters
@@ -41,7 +41,8 @@ Generic "AI-slop" interfaces (random gradients, glassmorphism, fake metrics, vag
 │   ├── empty-state.md             # empty / no-data screens
 │   ├── otp.md                     # OTP verification screen pattern
 │   ├── faq.md                     # FAQ & help center pattern
-│   └── 404-section.md             # polite page-not-found screen pattern
+│   ├── 404-section.md             # polite page-not-found screen pattern
+│   └── component-interactions.md  # standard inter-component interaction flows
 │
 ├── implementation/                # 6 implementation guides
 │   ├── react-idds.md              # official @idds/react usage
@@ -128,6 +129,7 @@ Before merging any AI-generated UI, run the relevant checklist from `checklists/
 | Design an OTP verification screen | `SKILL.md` → `rules/*` → `patterns/otp.md` → `checklists/accessibility-review.md` |
 | Build an FAQ or Help Center | `SKILL.md` → `rules/*` → `patterns/faq.md` → `checklists/ui-review.md` |
 | Design a custom 404 page | `SKILL.md` → `rules/*` → `patterns/404-section.md` → `checklists/ui-review.md` |
+| Design interactive user flows | `SKILL.md` → `rules/*` → `patterns/component-interactions.md` → `checklists/government-app-review.md` |
 | Audit an existing UI | `SKILL.md` → `rules/anti-ai-slop.md` → relevant `patterns/` → `checklists/government-app-review.md` |
 | Add a new screen to a React app | `SKILL.md` → `implementation/react-idds.md` → `templates/shared/` → closest `templates/*/` → `checklists/ui-review.md` |
 | Add a new screen to a Vue app | `SKILL.md` → `implementation/vue-idds.md` → `templates/shared/` → closest `templates/*/` → `checklists/ui-review.md` |
@@ -243,7 +245,7 @@ Svelte equivalent.
 
 ## Maintenance & Versioning
 
-- **Version:** 1.5.0 (see `SKILL.md`).
+- **Version:** 1.5.1 (see `SKILL.md`).
 - **Source of truth:** [design.inadigital.go.id](https://design.inadigital.go.id). When the official docs change, update the rule, pattern, and template files together.
 - **Adding a template:** create a folder under `templates/`, mirror the structure of `templates/dashboard/`, and add an entry in `templates/README.md` and the table above.
 - **Adding a pattern:** create `patterns/<name>.md` following the structure in `patterns/dashboard.md`, then reference it from `SKILL.md`'s file-reading order.

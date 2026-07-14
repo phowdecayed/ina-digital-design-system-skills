@@ -139,11 +139,11 @@ Public service workflows can be complex. The interface must reduce cognitive loa
 
 ---
 
-## Principle 5 — Inclusive by Default
+## Principle 5 — Inclusive by Default (WCAG 2.2 AA)
 
 ### Meaning
 
-A government interface should be usable by people with different abilities, devices, network quality, literacy levels, and administrative familiarity.
+A government interface must be usable by people with different abilities, devices, network quality, literacy levels, and administrative familiarity, adhering strictly to the **WCAG 2.2 AA** standard.
 
 ### AI Rules
 

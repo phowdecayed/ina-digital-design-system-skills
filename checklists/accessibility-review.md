@@ -1,8 +1,8 @@
-# Checklist: Accessibility Review
+# Checklist: Accessibility Review (WCAG 2.2 AA Standard)
 
 ## Purpose
 
-Use this checklist to evaluate whether a UI is accessible enough for government/public-service use.
+Use this checklist to evaluate whether a UI is accessible enough for government/public-service use, strictly aligning with the official IDDS audit criteria based on **WCAG 2.2 AA** (covering usability, accessibility, keyboard focus, and contrast).
 
 ---
 

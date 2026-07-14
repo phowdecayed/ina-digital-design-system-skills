@@ -106,6 +106,7 @@ When designing or redesigning a screen, the AI must produce:
 
 7. **Implementation notes**
    - React IDDS package if using React.
+   - Vue IDDS package if using Vue.
    - SvelteKit adaptation if no official Svelte package is available.
    - Tailwind token mapping where appropriate.
    - Use the closest example from `templates/` (Dashboard, Formulir, Katalog Artikel, or Shared App Shell) as the structural base, then adapt.
@@ -174,6 +175,16 @@ Use official IDDS React package when the project is React-based:
 
 - `@idds/react`
 - `@idds/react/index.css`
+- `setBrandTheme()`
+- `setThemeMode()`
+- Tailwind token integration when needed
+
+### Vue
+
+Use official IDDS Vue package when the project is Vue-based:
+
+- `@idds/vue`
+- `@idds/vue/index.css`
 - `setBrandTheme()`
 - `setThemeMode()`
 - Tailwind token integration when needed

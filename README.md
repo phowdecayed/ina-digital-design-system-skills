@@ -40,8 +40,9 @@ Generic "AI-slop" interfaces (random gradients, glassmorphism, fake metrics, vag
 │   ├── login-register.md          # authentication screens
 │   └── empty-state.md             # empty / no-data screens
 │
-├── implementation/                # 4 implementation guides
+├── implementation/                # 5 implementation guides
 │   ├── react-idds.md              # official @idds/react usage
+│   ├── vue-idds.md                # official @idds/vue usage
 │   ├── sveltekit-adaptation.md    # SvelteKit adaptation (no official package)
 │   ├── tailwind-token-mapping.md  # map IDDS tokens to Tailwind utilities
 │   └── component-mapping.md       # need → component decision table
@@ -122,6 +123,7 @@ Before merging any AI-generated UI, run the relevant checklist from `checklists/
 | Build a public-service form | `SKILL.md` → `rules/*` → `patterns/public-service-form.md` → `templates/formulir/` → `checklists/accessibility-review.md` |
 | Audit an existing UI | `SKILL.md` → `rules/anti-ai-slop.md` → relevant `patterns/` → `checklists/government-app-review.md` |
 | Add a new screen to a React app | `SKILL.md` → `implementation/react-idds.md` → `templates/shared/` → closest `templates/*/` → `checklists/ui-review.md` |
+| Add a new screen to a Vue app | `SKILL.md` → `implementation/vue-idds.md` → `templates/shared/` → closest `templates/*/` → `checklists/ui-review.md` |
 | Port IDDS to SvelteKit | `SKILL.md` → `implementation/sveltekit-adaptation.md` → `implementation/tailwind-token-mapping.md` → `templates/*/` |
 | Review copy / Indonesian text | `SKILL.md` → `rules/writing-tone.md` → `checklists/government-app-review.md` |
 
@@ -169,7 +171,7 @@ Do not switch brand themes per page unless the product is intentionally multi-br
 | Framework | Status | Use |
 |---|---|---|
 | **React + Vite/Next.js** | Official package available (`@idds/react`) | `implementation/react-idds.md` + `templates/*/*.jsx` |
-| **Vue 3** | Official package available (`@idds/vue`) | port `templates/*/*.jsx` → `.vue` single-file components |
+| **Vue 3** | Official package available (`@idds/vue`) | `implementation/vue-idds.md` + port `templates/*/*.jsx` → `.vue` single-file components |
 | **SvelteKit** | No official package — use as adaptation guide | `implementation/sveltekit-adaptation.md` |
 | **Vanilla HTML / static prototype** | CDN-only via `@idds/js` + Tailwind CDN | `templates/*/*.html` |
 

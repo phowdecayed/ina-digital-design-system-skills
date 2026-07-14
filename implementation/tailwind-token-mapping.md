@@ -43,10 +43,10 @@ Use the brand file that matches the application context.
 Use token extension in `tailwind.config.js` if project uses Tailwind v3.
 
 ```js
-import { iddsColorToken, inagovTokens } from '@idds/react'
+import { iddsColorToken, inagovTokens } from '@idds/react' // or '@idds/vue' for Vue
 
 export default {
-  content: ['./src/**/*.{js,ts,jsx,tsx,svelte}'],
+  content: ['./src/**/*.{js,ts,jsx,tsx,svelte,vue}'],
   theme: {
     extend: {
       colors: {

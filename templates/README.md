@@ -77,7 +77,7 @@ Pemetaan Tailwind token tersedia di [`implementation/tailwind-token-mapping.md`]
 | Framework | Lokasi contoh | Catatan |
 |---|---|---|
 | React | `templates/*/*.jsx` | Pakai `@idds/react` resmi. |
-| Vue | port manual dari JSX | Pakai `@idds/vue` bila proyek Vue. |
+| Vue | port manual dari JSX | Pakai `@idds/vue` resmi. Ikuti [`implementation/vue-idds.md`](../implementation/vue-idds.md). |
 | SvelteKit | port manual ke Svelte 5 | Ikuti [`implementation/sveltekit-adaptation.md`](../implementation/sveltekit-adaptation.md). |
 | HTML statis | lihat blok `html/` di tiap template | Untuk prototipe cepat, tetap pakai kelas token IDDS via CDN Tailwind. |
 

@@ -207,8 +207,22 @@ src/
 // src/lib/idds.ts
 import { setBrandTheme, setThemeMode } from '@idds/react'
 
+/**
+ * Custom theme handler supporting regional themes (like Jabar's co-primary sub-themes)
+ * that are not officially bundled in the national @idds/react package.
+ */
+export function setBrandThemeWithCustom(themeName: string) {
+  if (themeName.startsWith('jabar')) {
+    // Manually apply data-theme on html element to trigger local CSS variables override
+    document.documentElement.setAttribute('data-theme', themeName)
+  } else {
+    // Fallback to official IDDS package theme
+    setBrandTheme(themeName)
+  }
+}
+
 export function setupIdds() {
-  setBrandTheme('default')
+  setBrandThemeWithCustom('jabar-blue') // options: 'jabar-blue', 'jabar-green', 'jabar-yellow'
   setThemeMode('light')
 }
 ```

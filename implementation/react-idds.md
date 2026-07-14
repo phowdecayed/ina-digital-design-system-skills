@@ -100,6 +100,7 @@ Available documented themes include:
 - `bkn`
 - `lan`
 - `bgn`
+- `jabar`
 - `default`
 
 Rules:
@@ -148,6 +149,7 @@ Use another brand file if required:
 @import '@idds/styles/tailwind/css/panrb.css';
 @import '@idds/styles/tailwind/css/bkn.css';
 @import '@idds/styles/tailwind/css/lan.css';
+/* Note: For regional themes like 'jabar', declare JDS tokens locally in your main CSS (see rules/color-system.md) */
 ```
 
 ---

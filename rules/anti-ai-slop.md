@@ -74,6 +74,7 @@ To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly i
 - Glassmorphism for data-heavy admin panels.
 - Oversized decorative blobs.
 - Multiple card styles on one page.
+- Thick, colorful vertical accent borders on the left edge of cards (a generic SaaS dashboard cliché).
 - Unnecessary emoji in UI.
 - Floating elements with no function.
 - Random illustration unrelated to the task.
@@ -84,7 +85,7 @@ To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly i
 - Clear content hierarchy.
 - Limited accent color.
 - Strong typography rhythm.
-- Consistent cards.
+- Consistent cards with uniform, subtle borders (border-stroke-secondary) or no border at all (just background + focused shadow).
 - Realistic data density.
 - Explicit actions and states.
 

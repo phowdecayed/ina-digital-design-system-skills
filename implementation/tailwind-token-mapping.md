@@ -165,6 +165,31 @@ If exact classes differ in the installed IDDS token package, inspect available t
 
 ---
 
+## Transitions & Animations Mapping
+
+To ensure interfaces feel natural, alive, and polished without excessive decorative motion, AI must map transitions and animations to these exact Tailwind CSS classes:
+
+### 1. Interactive Elements (Buttons, Inputs, Links, Tabs)
+* **Standard Transition**: Always use a gentle, fast transition for hover, focus, and active state changes.
+  * *Tailwind classes*: `transition-all duration-200 ease-in-out`
+  * *Hover highlight example on Cards*: `hover:border-primary-300 hover:bg-surface-secondary`
+
+### 2. Overlays & Scrims (Modals, Drawers)
+* **Backdrop Scrim**: A soft dimming overlay behind dialogs.
+  * *Tailwind classes*: `transition-opacity duration-300 ease-out bg-black/40` (fades from `opacity-0` to `opacity-100`)
+* **Modal (Dialog)**: Fades and scales up slightly from the center.
+  * *Tailwind classes*: `transition-all duration-200 ease-out` (transitions from `opacity-0 scale-95` to `opacity-100 scale-100`)
+* **Drawer (Slide-over)**: Slides in smoothly from the right edge.
+  * *Tailwind classes*: `transition-transform duration-300 ease-out` (transitions from `translate-x-full` to `translate-x-0`)
+
+### 3. Loading Skeletons & Spinners
+* **Page Skeleton**: A pulsing shape indicating that content is loading.
+  * *Tailwind classes*: `animate-pulse bg-stroke-secondary/50` (or `bg-neutral-200/50`)
+* **Button/Input Spinner**: Standard rotating SVG spinner.
+  * *Tailwind classes*: `animate-spin h-20 w-20` with `stroke-width="3"`
+
+---
+
 ## AI Rules
 
 The AI must:

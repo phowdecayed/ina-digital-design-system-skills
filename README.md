@@ -40,11 +40,12 @@ Generic "AI-slop" interfaces (random gradients, glassmorphism, fake metrics, vag
 │   ├── login-register.md          # authentication screens
 │   └── empty-state.md             # empty / no-data screens
 │
-├── implementation/                # 5 implementation guides
+├── implementation/                # 6 implementation guides
 │   ├── react-idds.md              # official @idds/react usage
 │   ├── vue-idds.md                # official @idds/vue usage
 │   ├── sveltekit-adaptation.md    # SvelteKit adaptation (no official package)
 │   ├── tailwind-token-mapping.md  # map IDDS tokens to Tailwind utilities
+│   ├── shadcn-integration.md      # integrate shadcn/ui & shadcn-vue with IDDS tokens
 │   └── component-mapping.md       # need → component decision table
 │
 ├── templates/                     # 4 ready-to-use page templates
@@ -236,7 +237,7 @@ Svelte equivalent.
 
 ## Maintenance & Versioning
 
-- **Version:** 1.1.0 (see `SKILL.md`).
+- **Version:** 1.2.0 (see `SKILL.md`).
 - **Source of truth:** [design.inadigital.go.id](https://design.inadigital.go.id). When the official docs change, update the rule, pattern, and template files together.
 - **Adding a template:** create a folder under `templates/`, mirror the structure of `templates/dashboard/`, and add an entry in `templates/README.md` and the table above.
 - **Adding a pattern:** create `patterns/<name>.md` following the structure in `patterns/dashboard.md`, then reference it from `SKILL.md`'s file-reading order.

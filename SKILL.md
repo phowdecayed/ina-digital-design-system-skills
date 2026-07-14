@@ -7,7 +7,7 @@ description: Operational skill pack that teaches AI coding agents how to design,
 
 ## Status
 
-**Version:** 1.1.0  
+**Version:** 1.2.0  
 **Scope:** AI-assisted UI/UX design, redesign, implementation review, and frontend generation for Indonesian government/public-service applications.  
 **Reference basis:** INA Digital Design System (IDDS) public documentation, especially overview, foundation, components, patterns, and React developer guide.
 
@@ -108,7 +108,7 @@ When designing or redesigning a screen, the AI must produce:
    - React IDDS package if using React.
    - Vue IDDS package if using Vue.
    - SvelteKit adaptation if no official Svelte package is available.
-   - Tailwind token mapping where appropriate.
+   - Tailwind token mapping and shadcn integration guidelines where appropriate.
    - Use the closest example from `templates/` (Dashboard, Formulir, Katalog Artikel, or Shared App Shell) as the structural base, then adapt.
 
 ---

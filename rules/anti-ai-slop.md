@@ -43,13 +43,26 @@ To prevent unpolished, generic, and "dead" draft outputs, the AI must strictly i
 - **Rule**: Clickable cards, list items, and action items must never be static.
 - **Action**: Always add interactive hover states and soft transitions: `transition-all duration-300 hover:border-primary-300 hover:bg-surface-secondary`.
 
-### 4. Mandatory Iconography on Feature Cards
-- **Rule**: Feature lists, service lists, and information blocks must not be empty or plain text.
-- **Action**: Always embed functional icon badges (using `@tabler/icons-vue` or SVG inline wrappers). Format the icon container consistently: a rounded container `w-48 h-48 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center mb-16`.
+### 4. Mandatory Iconography and Illustration Types
+- **Rule**: Feature lists, empty states, and banner blocks must utilize correct, standardized IDDS illustration and icon types.
+- **Action**: 
+  - **Feature Lists / Spots**: Use **Ilustrasi Spot** (low complexity, `1:1` ratio, `150x150px` to `50x50px`, no live characters, uses dynamic brand color only) or system icon containers (`w-48 h-48 rounded-lg bg-primary-50 text-primary-600 flex items-center justify-center mb-16`).
+  - **Empty States**: Use **Ilustrasi State** (medium complexity, `280x210px` or `4:3` ratio, uses static character color with dynamic backdrop color). Reference: [design.inadigital.go.id/foundation/illustration/](https://design.inadigital.go.id/foundation/illustration/).
+  - **Onboarding / Homepage Headers**: Use **Ilustrasi Hero** (high complexity, narrative, front/top view, no text inside the image).
 
 ### 5. Precise Typography Spacing on Titles
 - **Rule**: Headings must not look "raw" or loosely stacked.
 - **Action**: Always apply strict typographical rhythm on display headers: `font-extrabold tracking-tight leading-tight` (or `leading-none`). Use `block mt-4 lg:inline lg:mt-0` for multi-word highlighting.
+
+### 6. Official Logo Protection
+- **Rule**: Never distort, apply drop shadows, glows, or modify the layout/proportion of official government or IDDS logos.
+- **Action**: Logo must have a clear height boundary of at least `32px` on digital screens, with free space around it equal to the "gov" letters. Reference: [design.inadigital.go.id/foundation/logo/](https://design.inadigital.go.id/foundation/logo/).
+
+### 7. Shadow/Effects Hierarchy
+- **Rule**: Do not use massive arbitrary shadows (`shadow-2xl`) for everything.
+- **Action**: Apply shadows strictly based on elevation:
+  - **Focused**: Tight, sharp shadows for cards, buttons, or form groups to anchor them on the surface (`shadow-sm` or thin border).
+  - **Float**: Loose, soft, light shadows for elevated overlays like tooltips, dialogs, dropdowns, and drawers (`shadow-md` or `shadow-lg`). Reference: [design.inadigital.go.id/foundation/effects/](https://design.inadigital.go.id/foundation/effects/).
 
 ---
 

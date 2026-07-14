@@ -101,7 +101,9 @@ A good empty state includes:
 ## Visual Rules
 
 - Keep it simple.
-- Use one icon or illustration at most.
+- Use one icon or **Ilustrasi State** at most (Standard size: `280x210px` or `4:3` ratio, as specified in `https://design.inadigital.go.id/foundation/illustration/`).
+- Do not use text inside the illustration; keep copy in external HTML/text elements.
+- Ensure background elements of the illustration use the active **Warna Dinamik** (dynamic brand theme color) while main characters/objects use **Warna Statik** (static colors).
 - Do not overdecorate.
 - Do not use humorous language in official workflows.
 - Keep text centered only for small empty panels; use left alignment in large admin pages if it improves scanning.
